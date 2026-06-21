@@ -1,22 +1,36 @@
-import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../../components/Header/Header";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import Home from '../../pages/Home Pages/Home';
-import About from '../../pages/About Pages/About';
+import Footer from "../../components/Footer/Footer";
+import { useState } from "react";
 
 const MainLayout = () => {
-  return (
-     <div className="flex">
-      <Sidebar />
+  const [isOpen, setIsOpen] = useState(false);
 
-      <div className="flex-1 flex flex-col">
+  return (
+    <div className="flex">
+      {/* Sidebar */}
+      <div
+        className={`fixed top-0 left-0 h-screen bg-black transition-all duration-300 ${
+          isOpen ? "w-40" : "w-20"
+        }`}
+      >
+        <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
+      </div>
+
+      {/* Main Content */}
+      <div
+        className={`flex-1 flex flex-col min-h-screen transition-all duration-300 ${
+          isOpen ? "ml-40" : "ml-20"
+        }`}
+      >
         <Navbar />
 
-        {/* Pages render here */}
-        <div className="flex-1 overflow-y-auto">
+        <main className="flex-1 pt-20 md:pt-10 flex flex-col">
           <Outlet />
-        </div>
+        </main>
+
+        <Footer />
       </div>
     </div>
   );
