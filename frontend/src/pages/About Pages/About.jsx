@@ -2,103 +2,97 @@ import img5 from "../../images/img5.jpg";
 import img2 from "../../images/img2.jpg";
 import img6 from "../../images/img6.png";
 
-const About = ({isOpen , setIsOpen}) => {
+const About = () => {
   return (
     <div>
 
       {/* First Part */}
       <div
-        style={{
-        backgroundImage: `url(${img5})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        height: "34vh",
-     }}
-        className="flex items-center justify-center relative"
-        >
-  <div className="absolute inset-0 bg-blue-300/40"></div>
-  <h1 className="relative text-white text-3xl font-extrabold z-10">About Page</h1>
-</div>
+        style={{ backgroundImage: `url(${img5})` }}
+        className="bg-cover bg-center h-[34vh] flex items-center justify-center relative"
+      >
+        <div className="absolute inset-0 bg-blue-300/40"></div>
+        <h1 className="relative text-white text-3xl font-extrabold z-10">About Page</h1>
+      </div>
 
-     <div className="lg:ml-100">
+      <div className="lg:ml-100">
         {/* Second Part */}
-      <div className="flex flex-row p-4 gap-6 md:gap-10 mt-10 lg:gap-34">
-        <div>
-          <h3 className="text-orange-400 font-extrabold lg:text-5xl">About Us</h3>
-          <h2 className="text-amber-700 font-bold lg:text-4xl">Welcome to Hunting Era</h2>
+        <div className="flex flex-row p-4 gap-6 md:gap-10 mt-10 lg:gap-34">
+          <div>
+            <h3 className="text-orange-400 font-extrabold lg:text-5xl">About Us</h3>
+            <h2 className="text-amber-700 font-bold lg:text-4xl">Welcome to Hunting Era</h2>
 
-          <p className="text-[10px] text-justify max-w-xs leading-6 lg:text-lg lg:max-w-lg lg:leading-8">
-            Hunting Era is a comprehensive website that helps users find the
-            best deals on products, analyze keywords, and locate vendors. Our
-            platform allows users to easily search for competitors of different
-            products, giving them a better understanding of the market and helping
-            them make more informed purchasing decisions.
-          </p>
+            <p className="text-[10px] text-justify max-w-xs leading-6 lg:text-lg lg:max-w-lg lg:leading-8">
+              Hunting Era is a comprehensive website that helps users find the
+              best deals on products, analyze keywords, and locate vendors. Our
+              platform allows users to easily search for competitors of different
+              products, giving them a better understanding of the market and helping
+              them make more informed purchasing decisions.
+            </p>
 
-          <ul className="grid grid-cols-2 gap-4 pt-4 text-xs  lg:gap-6 lg:text-2xl">
-            <li>Find Trendings</li>
-            <li>Find Compitators</li>
-            <li>Find Vendors</li>
-            <li>Book Products</li>
-          </ul>
+            <ul className="grid grid-cols-2 gap-4 pt-4 text-xs lg:gap-6 lg:text-2xl">
+              <li>Find Trendings</li>
+              <li>Find Competitors</li>
+              <li>Find Vendors</li>
+              <li>Book Products</li>
+            </ul>
+          </div>
+
+          <div>
+            <img
+              src={img2}
+              alt="Hunting Era platform preview"
+              className="w-90 h-60 md:w-78 md:h-64 lg:w-[600px] lg:h-[420px]"
+            />
+          </div>
         </div>
 
-        <div>
-          <img
-            src={img2}
-            alt="image"
-            className="w-90 h-60 md:w-78 md:h-64 lg:w-[600px] lg:h-[420px]"
-          />
+        {/* Third Part */}
+        <div className="flex gap-6 p-4 mt-10 lg:gap-34">
+
+          <div>
+            <img
+              src={img5}
+              alt="Hands working at a desk"
+              className="w-90 h-60 md:w-74 md:h-64 lg:w-[600px] lg:h-[420px]"
+            />
+          </div>
+
+          <div className="flex flex-col">
+            <h2 className="text-sm text-justify max-w-sm text-amber-700 font-bold lg:text-4xl lg:max-w-lg">
+              We Are Committed To Provide<br />
+              Safe Purchasing Environment
+            </h2>
+
+            <p className="text-[10px] text-justify max-w-xs leading-6 lg:text-lg lg:max-w-lg lg:leading-8">
+              At Hunting Era, we are committed to providing our users with the best possible
+              experience. Whether you are a consumer looking for the best deal on a product
+              or a business looking to improve your online presence, Hunting Era has the tools
+              and resources you need to succeed.
+              In addition to product comparisons, Hunting Era also offers a powerful keyword
+              analysis tool that allows users to identify the most relevant and popular keywords
+              for their products.
+            </p>
+
+            <h2 className="text-sm text-yellow-600 lg:text-xl lg:mt-4">Need Any Help? 24/7</h2>
+            <h3 className="text-xs lg:text-base">+92 3025454696</h3>
+          </div>
+
         </div>
+
       </div>
 
-      {/* Third Part */}
-      <div className="flex gap-6 p-4 mt-10 lg:gap-34">
-
-        <div>
-          <img
-            src={img5}
-            alt="hands and desk"
-            className="w-90 h-60 md:w-74 md:h-64 lg:w-[600px] lg:h-[420px]"
-          />
-        </div>
-
-        <div className="flex flex-col">
-          <h2 className="text-sm text-justify max-w-sm text-amber-700 font-bold lg:text-4xl lg:max-w-lg">
-            We Are Committed To Provide<br />
-            Safe Purchasing Environment
-          </h2>
-
-          <p className="text-[10px] text-justify max-w-xs leading-6 lg:text-lg  lg:max-w-lg lg:leading-8">
-            At Hunting Era, we are committed to providing our users with the best possible
-            experience. Whether you are a consumer looking for the best deal on a product
-            or a business looking to improve your online presence, Hunting Era has the tools
-            and resources you need to succeed.
-            In addition to product comparisons, Hunting Era also offers a powerful keyword
-            analysis tool that allows users to identify the most relevant and popular keywords
-            for their products.
-          </p>
-
-          <h2 className="text-sm text-yellow-600 lg:text-xl lg:mt-4">Need Any Help? 24/7</h2>
-          <h3 className="text-xs lg:text-base">+92 3025454696</h3>
-        </div>
-
-      </div>
-
-     </div>
-
-      {/* Fourth Part  */}
+      {/* Fourth Part */}
       <div
-        className="mt-28 flex items-center justify-center relative bg-red-500 mt-10"
+        className="mt-10 flex items-center justify-center relative"
         style={{
-            backgroundImage: `url(${img6})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center top",
-            backgroundRepeat: "no-repeat",
-            height: "70vh",
-          }}
-        >
-
+          backgroundImage: `url(${img6})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center top",
+          backgroundRepeat: "no-repeat",
+          height: "70vh",
+        }}
+      >
         <div className="absolute inset-0 bg-black/40"></div>
 
         <div className="relative text-center text-white">

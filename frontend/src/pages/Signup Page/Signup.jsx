@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Login = () => {
+const Signup = () => {
   return (
     <div className="flex items-center justify-center min-h-full py-10 px-4">
       <form
@@ -14,16 +14,29 @@ const Login = () => {
         "
       >
         <h1 className="text-2xl md:text-xl lg:text-3xl font-extrabold text-center text-gray-800 mb-1">
-          Sign In
+          Sign Up
         </h1>
+
+        <div className="flex flex-col gap-1">
+          <label className="text-sm md:text-xs lg:text-sm font-semibold text-gray-600">
+            Name
+          </label>
+          <input
+            placeholder="Enter name"
+            className="
+              border border-gray-300 rounded-lg
+              px-3 py-2 md:px-2 md:py-1.5 lg:px-3 lg:py-2
+              text-sm md:text-xs lg:text-base
+              outline-none focus:ring-2 focus:ring-blue-500 transition
+            "
+          />
+        </div>
 
         <div className="flex flex-col gap-1">
           <label className="text-sm md:text-xs lg:text-sm font-semibold text-gray-600">
             Email Address
           </label>
-
           <input
-            type="email"
             placeholder="Enter email"
             className="
               border border-gray-300 rounded-lg
@@ -49,6 +62,35 @@ const Login = () => {
               outline-none focus:ring-2 focus:ring-blue-500 transition
             "
           />
+
+          <div className="text-xs md:text-[10px] lg:text-xs mt-1 flex flex-col gap-1">
+            <p className="text-red-500">
+              ❌ Password has special characters.
+            </p>
+            <p className="text-red-500">
+              ❌ Password has a number.
+            </p>
+            <p className="text-red-500">
+              ❌ Password has a capital letter.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-1">
+          <label className="text-sm md:text-xs lg:text-sm font-semibold text-gray-600">
+            Confirm Password
+          </label>
+
+          <input
+            type="password"
+            placeholder="Confirm password"
+            className="
+              border border-gray-300 rounded-lg
+              px-3 py-2 md:px-2 md:py-1.5 lg:px-3 lg:py-2
+              text-sm md:text-xs lg:text-base
+              outline-none focus:ring-2 focus:ring-blue-500 transition
+            "
+          />
         </div>
 
         <button
@@ -58,19 +100,29 @@ const Login = () => {
             text-white font-semibold transition
             h-9 md:h-8 lg:h-10
             text-sm md:text-xs lg:text-base
-            mt-2 w-full
+            mt-2
           "
         >
-          Login
+          Register
         </button>
 
         <h2 className="text-sm md:text-xs lg:text-sm text-center text-gray-600 mt-2">
-          Don't have an account?{" "}
+          Register As a Vendor?{" "}
           <Link
-            to="/signup"
+            to="/vendor-signup"
             className="text-blue-500 underline"
           >
-            Sign Up
+            Register
+          </Link>
+        </h2>
+
+        <h2 className="text-sm md:text-xs lg:text-sm text-center text-gray-600">
+          Have an Account?{" "}
+          <Link
+            to="/signin"
+            className="text-blue-500 underline"
+          >
+            Login
           </Link>
         </h2>
       </form>
@@ -78,4 +130,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;

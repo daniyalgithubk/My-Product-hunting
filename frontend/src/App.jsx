@@ -7,6 +7,7 @@ import MainLayout from './Layouts/MainLayout/MainLayout.jsx'
 import Home from './pages/Home Pages/Home.jsx'
 import About from './pages/About Pages/About.jsx'
 import Login from './pages/Login Pages/Login.jsx'
+import Signup from './pages/Signup Page/Signup.jsx'
 
 
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/signin" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
       </Route>
     </Routes>
     </>
