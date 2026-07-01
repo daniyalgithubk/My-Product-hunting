@@ -30,11 +30,20 @@ const Footer = () => {
         {/* third part */}
         <div className="flex flex-col gap-1">
           <h3 className="font-bold text-sm lg:text-2xl">Head Office</h3>
+<<<<<<< HEAD
           <div className="text-xs flex flex-col gap-3 lg:text-base">
             <p>Islamabad, Pakistan</p>
             <p>Phone: +92 3025454696</p>
             <p>Email: khattakd87@gmail.com</p>
             <p>Office Time: 9:00AM - 6:00PM</p>
+=======
+          <div className="text-xs flex flex-col gap-3 lg:text-base lg:mt-2">
+            <h5>Islamabad, Pakistan</h5>
+            <h5>Phone: +92 3025454696</h5>
+            <h5>Email: khattakd87@gmail.com</h5>
+            <h5>Office Time: 9:00AM - 6:00PM</h5>
+
+>>>>>>> a064230408e92e7fbca6218d3f76e9215bef7aa8
           </div>
         </div>
 
