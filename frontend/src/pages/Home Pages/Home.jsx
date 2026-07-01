@@ -1,5 +1,6 @@
 
 import img from "../../Images/img.jpg";
+import Search from "../../components/Search/Search";
 
 const Home = () => {
   return (
@@ -12,7 +13,11 @@ const Home = () => {
       }}
       className="flex-1 flex items-center justify-center w-full"
     >
-      <h1 className="text-3xl text-black font-extrabold">Home Page</h1>
+      <div >
+        <label className="text-2xl font-bold">Search here</label>
+        <Search />
+      </div>
+
     </div>
   );
 };
